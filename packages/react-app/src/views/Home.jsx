@@ -109,7 +109,7 @@ if(membership){
               </Row>
   );
 } else {
-  return (<div/>)
+  return (<div>EarlyAdopterIngroup's Feed: </div>)
 
 }
 

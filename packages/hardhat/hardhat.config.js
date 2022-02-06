@@ -174,7 +174,7 @@ module.exports = {
       },
     },
     mumbai: {
-      url: "https://speedy-nodes-nyc.moralis.io/XOFPCpXSD7tF8LhsfIxVw65U6G2pXjjPtGGvA7PN/polygon/mumbai", // <---- YOUR MORALIS ID! (not limited to infura)
+      url: "https://rpc-mumbai.maticvigil.com/v1/b437e8af4e165daa25b539ebca1c815eee565818", // <---- YOUR MORALIS ID! (not limited to infura)
       gasPrice: 1000000000,
       accounts: {
         mnemonic: mnemonic(),
