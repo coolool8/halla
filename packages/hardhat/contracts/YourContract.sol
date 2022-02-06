@@ -10,6 +10,7 @@ contract YourContract {
 
   // event SetPurpose(address sender, string purpose);
   event MessageReceived(address sender, uint256 timestamp);
+  event NotMember(address sender);
   string public purpose = "Building Unstoppable Apps!!!";
 
   mapping(address=>bool) public membership;
@@ -45,7 +46,10 @@ contract YourContract {
     return messages[messageIndex].timestamp;
 
   }
+  function getCurrentTime() public view returns (uint256){
+    return block.timestamp;
 
+  }
   function getVotes(uint256 messageIndex) public view returns (uint256){
     return messages[messageIndex].votes;
 
@@ -73,6 +77,9 @@ contract YourContract {
       messages.push(temp);
       emit MessageReceived(msg.sender, block.timestamp);
       voteMap.push({});
+    } else {
+      emit NotMember (msg.sender);
+
     }
     messagecount++;
   }
